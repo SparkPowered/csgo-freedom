@@ -60,10 +60,12 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Setup compiler workspace
         run: |
-          meson setup Build
+          meson setup build
+          ls -ls
           
       # Runs a set of commands using the runners shell
       - name: Compile
         run: |
-          cd Build
+          cd build
+          ls -ls
           meson compile
