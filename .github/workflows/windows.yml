@@ -39,20 +39,19 @@ jobs:
       # Runs a single command using the runners shell
       - name: Installing CLang12
         run: |
-          # sudo apt -y install clang-12
+          choco install llvm
           clang --version
-          clang-12 --version
           
       # Runs a single command using the runners shell
       - name: Installing Ninja
         run: |
-          # sudo apt -y install ninja-build
+          choco install ninja
           ninja --version
           
       # Runs a single command using the runners shell
       - name: Installing Meson
         run: |
-          # sudo apt -y install meson
+          choco install meson
           meson --version
         
 
@@ -65,6 +64,4 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Compile
         run: |
-          # cd build
-          # ls -ls
-          meson compile
+          meson compile -C build
