@@ -53,16 +53,16 @@ jobs:
         run: |
           choco install meson
           refreshenv
-          "C:\Program Files\Meson\meson.exe" --version
+          powershell -command Start-Process -FilePath "'C:/Program Files/Meson/meson.exe'" -ArgumentList '--version'
         
 
       # Runs a set of commands using the runners shell
       - name: Setup compiler workspace
         run: |
-          "C:\Program Files\Meson\meson.exe" setup build
+          powershell -command Start-Process -FilePath "'C:/Program Files/Meson/meson.exe'" -ArgumentList 'setup build'
           dir
           
       # Runs a set of commands using the runners shell
       - name: Compile
         run: |
-          "C:\Program Files\Meson\meson.exe" -C build
+          powershell -command Start-Process -FilePath "'C:/Program Files/Meson/meson.exe'" -ArgumentList 'compile -C build'
