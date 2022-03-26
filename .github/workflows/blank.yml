@@ -28,7 +28,7 @@ jobs:
       # Runs a single command using the runners shell
       - name: Prepare Enviroment
         run: |
-          cat /etc/issue,
+          ls /etc/,
           uname -a,
           apt -y update
           apt -y install clang-12,
