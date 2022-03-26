@@ -65,4 +65,4 @@ jobs:
       - name: Compile
         run: |
           dir
-          start-process 'C:/Program Files/Meson/meson.exe' -argument "compile" -NoNewWindow
+          start-process 'C:/Program Files/Meson/meson.exe' -argument "compile -C build" -NoNewWindow
