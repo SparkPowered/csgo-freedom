@@ -34,7 +34,7 @@ jobs:
       # Runs a single command using the runners shell
       - name: Updateing Aptitude
         run: |
-          apt -y update
+          sudo apt -y update
           
       # Runs a single command using the runners shell
       - name: Installing CLang12
