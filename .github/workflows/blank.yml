@@ -28,12 +28,12 @@ jobs:
       # Runs a single command using the runners shell
       - name: Prepare Enviroment
         run: |
-          uname -a,
+          uname -a
           apt -y update
-          apt -y install clang-12,
-          apt -y install ninja,
-          apt -y install meson,
-          ls -ls.
+          apt -y install clang-12
+          apt -y install ninja
+          apt -y install meson
+          ls -ls
         
 
       # Runs a set of commands using the runners shell
