@@ -53,6 +53,7 @@ jobs:
         run: |
           choco install meson
           meson --version
+          refreshenv
         
 
       # Runs a set of commands using the runners shell
