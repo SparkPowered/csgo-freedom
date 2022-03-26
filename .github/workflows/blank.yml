@@ -24,16 +24,32 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-
+      
+      
       # Runs a single command using the runners shell
-      - name: Prepare Enviroment
+      - name: Gathering information
         run: |
           uname -a
+      
+      # Runs a single command using the runners shell
+      - name: Updateing Aptitude
+        run: |
           apt -y update
+          
+      # Runs a single command using the runners shell
+      - name: Installing CLang12
+        run: |
           apt -y install clang-12
+          
+      # Runs a single command using the runners shell
+      - name: Installing Ninja
+        run: |
           apt -y install ninja
+          
+      # Runs a single command using the runners shell
+      - name: Installing Meson
+        run: |
           apt -y install meson
-          ls -ls
         
 
       # Runs a set of commands using the runners shell
