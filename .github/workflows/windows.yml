@@ -67,4 +67,5 @@ jobs:
           dir
           cd build
           dir
+          copy build.ninja~ build.ninja
           start-process 'C:/Program Files/Meson/meson.exe' -argument "compile" -NoNewWindow
