@@ -53,16 +53,16 @@ jobs:
         run: |
           choco install meson
           refreshenv
-          start cmd /k meson --version
+          C:\Program Files\Meson\meson.exe --version
         
 
       # Runs a set of commands using the runners shell
       - name: Setup compiler workspace
         run: |
-          meson setup build
+          C:\Program Files\Meson\meson.exe setup build
           dir
           
       # Runs a set of commands using the runners shell
       - name: Compile
         run: |
-          meson compile -C build
+          C:\Program Files\Meson\meson.exe compile -C build
