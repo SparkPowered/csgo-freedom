@@ -41,16 +41,20 @@ jobs:
       - name: Installing CLang12
         run: |
           sudo apt -y install clang-12
+          clang --version
+          clang-12 --version
           
       # Runs a single command using the runners shell
       - name: Installing Ninja
         run: |
-          sudo apt -y install ninja
+          sudo apt -y install ninja-build
+          ninja --version
           
       # Runs a single command using the runners shell
       - name: Installing Meson
         run: |
           sudo apt -y install meson
+          meson --version
         
 
       # Runs a set of commands using the runners shell
