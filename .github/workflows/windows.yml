@@ -32,9 +32,9 @@ jobs:
           systeminfo
       
       # Runs a single command using the runners shell
-      - name: Updateing Aptitude
+      - name: Installing Choco Package manager
         run: |
-          # sudo apt -y update
+          Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
           
       # Runs a single command using the runners shell
       - name: Installing CLang12
